@@ -1,0 +1,4 @@
+include ':serialport'
+include ':app'
+rootProject.name = "SerilPortSample"
+include ':snap-time-picker'

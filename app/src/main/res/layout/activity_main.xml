@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E3843"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#c0392b"
+        android:text="连接"
+        app:icon="@android:drawable/stat_sys_data_bluetooth"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/buttonDisconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#95a5a6"
+        android:text="断开"
+        app:icon="@android:drawable/presence_offline"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+    <com.suke.widget.SwitchButton
+        android:id="@+id/switchButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConnect" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="14dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:text="开机"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/switchButton"
+        app:layout_constraintStart_toEndOf="@+id/switchButton" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="14dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:text="关机"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/switchButton"
+        app:layout_constraintEnd_toStartOf="@+id/switchButton" />
+
+    <Button
+        android:id="@+id/button9V"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="#27ae60"
+        android:padding="5dp"
+        android:text="0.00 V"
+        android:textSize="20sp"
+        app:icon="@android:drawable/ic_lock_idle_charging"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDisconnect" />
+
+
+    <TextView
+        android:id="@+id/textTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:shadowColor="#0f0"
+        android:shadowRadius="20"
+        android:text="00:00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#00FFC4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchButton" />
+
+    <TextView
+        android:id="@+id/textCur"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:shadowColor="#0f0"
+        android:shadowRadius="20"
+        android:text="0.00 mA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#00FFC4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9V" />
+
+    <TextView
+        android:id="@+id/text15Vol"
+        android:layout_width="wrap_content"
+        android:layout_height="160px"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="20px"
+        android:paddingTop="20px"
+        android:paddingRight="20px"
+        android:paddingBottom="20px"
+        android:shadowColor="#00ff00"
+        android:shadowRadius="20"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#00FFCC"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toEndOf="@+id/button15V"
+        app:layout_constraintTop_toBottomOf="@+id/knob" />
+
+
+
+    <Button
+        android:id="@+id/button15V"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="28dp"
+        android:text="读15V"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintTop_toBottomOf="@+id/knob" />
+
+    <Button
+        android:id="@+id/buttonTimer"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#2980b9"
+        android:text="定时"
+        app:icon="@android:drawable/ic_menu_recent_history"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimer" />
+
+    <Button
+        android:id="@+id/buttonRA"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#f39c12"
+        android:text="电流"
+        app:icon="@android:drawable/ic_menu_mylocation"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCur" />
+
+    <TextView
+        android:id="@+id/textAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="90dp"
+        android:text="最高电流"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/arc_seek_bar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:text="最低电流"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/arc_seek_bar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+<!--    <it.beppi.knoblibrary.Knob-->
+<!--        android:id="@+id/knob"-->
+<!--        android:layout_width="240dp"-->
+<!--        android:layout_height="240dp"-->
+<!--        android:layout_marginTop="28dp"-->
+<!--        app:kNumberOfStates="6"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/buttonRA"-->
+<!--        />-->
+
+    <com.gcssloop.widget.ArcSeekBar
+        android:id="@+id/arc_seek_bar"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="20dp"
+        app:arc_open_angle="90"
+        app:arc_progress="0"
+        app:arc_rotate_angle="90"
+        app:arc_thumb_color="#fff"
+        app:arc_thumb_mode="STROKE"
+        app:arc_thumb_radius="16dp"
+        app:arc_thumb_shadow_color="#000000"
+        app:arc_thumb_shadow_radius="3dp"
+        app:arc_thumb_width="3dp"
+        app:arc_width="40dp"
+
+        app:arc_border_width="4dp"
+        app:arc_max="8"
+        app:arc_min="0"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/buttonRA" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="298dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="脉冲经颅刺激仪"
+        android:textColor="#B39DDB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:shadowColor="#00f"
+        android:shadowRadius="30"
+        android:text="0"
+        android:textColor="#80DEEA"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/arc_seek_bar"
+        app:layout_constraintEnd_toEndOf="@+id/arc_seek_bar"
+        app:layout_constraintStart_toStartOf="@+id/arc_seek_bar"
+        app:layout_constraintTop_toTopOf="@+id/arc_seek_bar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
